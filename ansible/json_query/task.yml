@@ -5,7 +5,11 @@
       shell: cat example.json
       register: json_file
 
-    - name: Saving variable
-      set_fact: json_var={{ (json_file.stdout | from_json)[0]['id'] }}
+    # - name: Saving variable
+    #   set_fact: json_var={{ (json_file.stdout | from_json)[0]['id'] }}
+    #
+    # - debug: var=json_var
 
-    - debug: var=json_var
+    - name: Display all variables
+      debug: var=item
+      with_items: "{{json_file.stdout|from_json|json_query('[*].id')}}"
