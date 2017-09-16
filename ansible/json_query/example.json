@@ -1,0 +1,41 @@
+{
+"info":
+[
+    {
+        "hostgroup": "zookeeper",
+        "id": "id-0"
+    },
+    {
+        "hostgroup": "zookeeper",
+        "id": "id-1"
+    },
+    {
+        "hostgroup": "zookeeper",
+        "id": "id-2"
+    },
+    {
+        "hostgroup": "kafka-broker",
+        "id": "id-3"
+    },
+    {
+        "hostgroup": "kafka-broker",
+        "id": "id-4"
+    },
+    {
+        "hostgroup": "kafka-broker",
+        "id": "id-5"
+    },
+    {
+        "disk": "/dev/xvdf",
+        "node": "kafka-broker",
+        "size": 20,
+        "type": "gp2"
+    },
+    {
+        "disk": "/dev/xvdg",
+        "node": "zookeeper",
+        "size": 10,
+        "type": "gp2"
+    }
+]
+}
