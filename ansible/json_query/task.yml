@@ -10,6 +10,10 @@
     #
     # - debug: var=json_var
 
-    - name: Display all variables
+    - name: Display all Host Groups
       debug: var=item
-      with_items: "{{json_file.stdout|from_json|json_query('[*].id')}}"
+      with_items: "{{json_file.stdout|from_json|json_query('[*].hostgroup')}}"
+
+    - name: Display all Nodes
+      debug: var=item
+      with_items: "{{json_file.stdout|from_json|json_query('[*].node')}}"
