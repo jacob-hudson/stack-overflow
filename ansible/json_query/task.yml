@@ -6,6 +6,6 @@
       register: json_file
 
     - name: Saving variable
-      set_fact: json_var={{ (json_file.stdout | from_json)['info'][0]['id'] }}
+      set_fact: json_var={{ (json_file.stdout | from_json)[0]['id'] }}
 
     - debug: var=json_var

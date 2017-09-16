@@ -1,5 +1,3 @@
-{
-"info":
 [
     {
         "hostgroup": "zookeeper",
@@ -38,4 +36,3 @@
         "type": "gp2"
     }
 ]
-}
