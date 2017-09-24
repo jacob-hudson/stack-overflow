@@ -20,7 +20,8 @@
       with_items: "{{json_file.stdout|from_json|json_query('[*].node')|list}}"
 
 # reference - https://stackoverflow.com/questions/36681994/create-a-list-of-dictionaries-from-host-groups-in-ansible-playbook
-# reference - https://stackoverflow.com/questions/35605603/using-ansible-set-fact-to-create-a-dictionary-from-register-results
+# reference - https://stackoverflow.com/questions/3
+# reference - https://docs.ansible.com/ansible/latest/playbooks_filters.html#combining-hashes-dictionaries
     # - name: Creating JSON
     #   set_facts:
     #     output: "{{ outout|default([]) | combine({ 'hostgroup': item.hostgroup, })}}"
